@@ -1,6 +1,6 @@
 User debian-tor
 
-SocksPort 0.0.0.0:9050 # Default: Bind to localhost:9050 for local connections.
+SocksPort 0.0.0.0:9150 # Default: Bind to localhost:9050 for local connections.
 
 ## Entry policies to allow/deny SOCKS requests based on IP address.
 ## First entry that matches wins. If no SocksPolicy is set, we accept

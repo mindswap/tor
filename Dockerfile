@@ -8,8 +8,13 @@ RUN echo "deb     http://deb.torproject.org/torproject.org trusty main" >> /etc/
 	apt-get -y --no-install-recommends install deb.torproject.org-keyring tor && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
-	
+
+RUN mv /var/lib/tor / && \
+	ln -s /tor /var/lib/
+
 COPY torrc /etc/tor/	
+
+VOLUME /tor
 
 EXPOSE 9050
 
